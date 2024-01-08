@@ -1,17 +1,19 @@
 const express = require('express')
 const router = express.Router()
 
-
+const Goal = require('../models/goalModel')
 
 // which is a request we wanna listen for 
 // get - read 
-router.get('/',(req,res) => {
+router.get('/',async (req,res) => {
     // this are endpoints
     // console.log(req.body) OR
     //  if(!req.body.text){
     //     res.json({message: 'please add a text field'})
     // }
-    res.json({name:'Get goals'})
+
+   
+    res.json({name:'goals'})
 })
 
 // post - create
